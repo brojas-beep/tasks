@@ -1,7 +1,7 @@
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
- * Create a new blank question with the given `id`, `name`, and `type. The `body` and
+ * Create a new blank question with the given `id`, `name`, and `type`. The `body` and
  * `expected` should be empty strings, the `options` should be an empty list, the `points`
  * should default to 1, and `published` should default to false.
  */
@@ -11,9 +11,9 @@ export function makeBlankQuestion(
     type: QuestionType,
 ): Question {
     return {
-        id: id,
-        name: name,
-        type: type,
+        id,
+        name,
+        type,
         body: "",
         expected: "",
         options: [],
@@ -66,16 +66,24 @@ export function toShortForm(question: Question): string {
  *  - The second line should be the `body`
  *  - If the question is a `multiple_choice_question`, then the following lines
  *      need to show each option on its line, preceded by a dash and space.
- *
  * The example below might help, but don't include the border!
+
  * ----------Example-------------
+
  * |# Name                      |
+
  * |The body goes here!         |
+
  * |- Option 1                  |
+
  * |- Option 2                  |
+
  * |- Option 3                  |
+
  * ------------------------------
+
  * Check the unit tests for more examples of what this looks like!
+
  */
 export function toMarkdown(question: Question): string {
     let markdown = `# ${question.name}\n${question.body}`;
@@ -123,7 +131,7 @@ export function publishQuestion(question: Question): Question {
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
     return {
         ...oldQuestion,
-        id: id,
+        id,
         name: `Copy of ${oldQuestion.name}`,
         published: false,
     };
@@ -159,9 +167,9 @@ export function mergeQuestion(
 ): Question {
     return {
         ...contentQuestion,
-        id: id,
-        name: name,
-        points: points,
+        id,
+        name,
+        points,
         published: false,
     };
 }
