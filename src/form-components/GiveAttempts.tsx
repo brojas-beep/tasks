@@ -17,18 +17,22 @@ export function GiveAttempts(): React.JSX.Element {
         }
     }
 
+    function handleRequestChange(event: React.ChangeEvent<HTMLInputElement>) {
+        setRequestedAttempts(event.target.value);
+    }
+
     return (
         <div>
             <h3>Give Attempts</h3>
-            <div>Attempts Left: {attemptsLeft}</div>
+            <div>
+                Attempts: <span>{attemptsLeft}</span>
+            </div>
             <Form.Group controlId="formGiveAttempts">
                 <Form.Label>Request Attempts:</Form.Label>
                 <Form.Control
                     type="number"
                     value={requestedAttempts}
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                        setRequestedAttempts(event.target.value)
-                    }
+                    onChange={handleRequestChange}
                 />
             </Form.Group>
             <Button onClick={useAttempt} disabled={attemptsLeft <= 0}>
