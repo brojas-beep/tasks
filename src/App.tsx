@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import { Button, Col, Container, Row } from "react-bootstrap";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
@@ -18,60 +17,8 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-<<<<<<< HEAD
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-            <p>Brandon Marquez Rojas</p>
-            <p>Hello World</p>
-
-            <img
-                src="https://a-z-animals.com/media/2021/11/Cool-Types-of-Birds-toucan-1024x535.jpg"
-                alt="A colorful toucan bird"
-            />
-
-            <h1>Cool Birds</h1>
-            <ul>
-                <li>Pigeon</li>
-                <li>Toucan</li>
-                <li>Parrot</li>
-            </ul>
-
-            <Button
-                onClick={() => {
-                    // eslint-disable-next-line no-console
-                    console.log("Hello World!");
-                }}
-            >
-                Log Hello World
-            </Button>
-
-            <Container>
-                <Row>
-                    <Col>
-                        <div
-                            style={{
-                                width: "100px",
-                                height: "50px",
-                                backgroundColor: "red",
-                            }}
-                        ></div>
-                    </Col>
-                    <Col>
-                        <div
-                            style={{
-                                width: "100px",
-                                height: "50px",
-                                backgroundColor: "red",
-                            }}
-                        ></div>
-                    </Col>
-                </Row>
-            </Container>
-=======
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
@@ -80,9 +27,6 @@ function App(): React.JSX.Element {
             <ShoveBox></ShoveBox>
             <hr></hr>
             <Counter></Counter>
->>>>>>> upstream/task-components
-            <hr />
-            <Counter />
             <hr />
             <RevealAnswer />
             <hr />
